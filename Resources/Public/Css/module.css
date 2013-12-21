@@ -1,0 +1,47 @@
+table.devices {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 11px;
+	line-height: 14px;
+}
+table.devices label {
+	font-size: 11px;
+	line-height: 14px;
+	display: block;
+	cursor: pointer;
+}
+table.devices input[type=checkbox] {
+	cursor: pointer;
+	vertical-align: middle;
+}
+table.devices td {
+	white-space: nowrap;
+}
+td.col-device-name {
+	width: 100%;
+	font-weight: bold;
+}
+dl.devices {
+	margin: 20px 0;
+}
+dl.devices dt {
+	clear: left;
+	float: left;
+	width: 130px;
+	line-height: 20px;
+	height: 20px;
+}
+dl.devices dd {
+	margin-left: 130px;
+	line-height: 20px;
+	height: 20px;
+}
+dl.devices label {
+	cursor: pointer;
+}
+#device-offset {
+	width: 50px;
+}
+p.submit {
+	margin-top: 20px;
+}

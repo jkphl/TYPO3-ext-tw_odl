@@ -1,0 +1,77 @@
+<table border="1">
+	<thead>
+		<tr>
+	 		<th><f:translate key="device.name" /></th>
+			<th><f:translate key="device.os" /></th>
+			<th><f:translate key="device.resolution" /></th>
+			<th><f:translate key="device.diagonal" /></th>
+			<th><f:translate key="device.density" /></th>
+			<th><f:translate key="device.resolution.css" /></th>
+			<th><f:translate key="device.inputmethods" /></th>
+			<th><f:translate key="device.connectivity" /></th>
+			<th><f:translate key="device.browsers" /></th>
+			<th><f:translate key="device.comment" /></th>
+			<th><f:translate key="device.contributor" /></th>
+			<th><f:translate key="device.available" /></th>
+		</tr>
+	</thead>
+	<f:for each="{devices}" as="device">
+	<tbody>
+		<tr>
+			<td>{device.manufacturer.name} {device.name}</td>
+			<td>{device.os.name} {device.osversion.version}</td>
+			<td>{device.width} x {device.height}</td>
+			<td>
+				{device.diagonal}"
+			</td>
+			<td>
+				{device.ppcm} ppcm / {device.ppi} ppi
+			</td>
+			<td>
+				<ul>
+					<f:for each="{device.resolutions}" as="resolution">
+						<li class="css{f:if(condition: '{resolution.orientation} == 1', then: ' portrait')}{f:if(condition: '{resolution.orientation} == 2', then: ' landscape')}{f:if(condition: '{resolution.orientation} == 3', then: ' both')}">{resolution.width} x {resolution.height}<f:if condition="{resolution.superRatio}"> @ {resolution.ratio}x</f:if></li>
+					</f:for>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<f:for each="{device.inputmethods}" as="inputmethod"><li><f:translate key="LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:tx_twodl_domain_model_device.inputmethods.{inputmethod}" /></li></f:for>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<f:for each="{device.connectivity}" as="connectivity"><li><f:translate key="LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:tx_twodl_domain_model_device.connectivity.{connectivity}" /></li></f:for>
+				</ul>
+			</td>
+			<td>
+				<f:if condition="{device.browsers}">
+					<f:then>
+						<ul>
+							<f:for each="{device.browsers}" as="browser"><li>{browser.browser.name} {browser.version.version}</li></f:for>
+						</ul>
+					</f:then>
+					<f:else>&nbsp;</f:else>
+				</f:if>
+			</td>
+			<td>
+				<f:if condition="{device.comment}">
+					<f:format.html>{device.comment}</f:format.html>
+				</f:if>
+			</td>
+			<td>
+            	<f:if condition="{device.contributor.url}">
+					<f:then><f:link.external uri="{device.contributor.url}" target="_blank">{device.contributor.name}</f:link.external></f:then>
+					<f:else>{device.contributor.name}</f:else>
+				</f:if>
+			</td>
+		 	<td colspan="2">
+				<f:if condition="{device.available}">
+					<f:then><label><f:translate key="device.available.ondemand" /> <input type="checkbox" name="device[]" value="{device.uid} - {device.name}"/></label></f:then>
+					<f:else><f:translate key="device.available.permanent" /></f:else>
+				</f:if>
+		 	</td>
+		</tr>
+	</tbody>
+	</f:for>
+</table>

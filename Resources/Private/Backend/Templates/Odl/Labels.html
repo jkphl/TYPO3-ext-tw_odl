@@ -1,0 +1,57 @@
+{namespace odl=Tollwerk\TwOdl\ViewHelpers}
+<f:layout name="module" />
+
+<f:section name="main">
+
+	<f:be.container pageTitle="foo" enableJumpToUrl="true"
+		enableClickMenu="false" loadPrototype="false"
+		loadScriptaculous="false" loadExtJs="false" loadExtJsTheme="false"
+		extJsAdapter="jQuery" enableExtJsDebug="false"
+		addCssFile="{f:uri.resource(path:'Css/module.css')}"
+		addJsFile="{f:uri.resource(path:'Js/module.js')}">
+
+		<h2><f:translate key="mod.labels.header"/></h2>
+		<f:if condition="{devices}">
+			<f:then>
+				<f:if condition="{labelTemplates}">
+					<f:then>
+						<form action="{f:uri.action(action: 'print')}" method="post">
+							<table class="typo3-dblist devices">
+									<tr class="t3-row-header">
+										<td class="col-icon">&nbsp;</td>
+										<td colspan="2"><f:translate key="LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:tx_twodl_domain_model_device"/> (<f:count subject="{devices}"/>)</td>
+									</tr>
+									<f:for each="{devices}" as="device">
+										<tr class="db_list_normal">
+											<td class="col-icon"><input type="checkbox" name="tx_twodl_web_twodlodl[devices][]" value="{device.uid}" class="device" id="device-{device.uid}"/></td>
+											<td class="col-identifier"><label for="device-{device.uid}"><odl:deviceIdentifier device="{device}" identifier="{settings.deviceIdentifier}" digits="{settings.deviceNumberDigits}"/></label></td>
+											<td class="col-device-name"><label for="device-{device.uid}">{device.manufacturer.name} {device.name}</label></td>
+										</tr>
+									</f:for>
+							</table>
+							<p><input type="button" id="select-all" value="{f:translate(key: 'mod.labels.devices.select.all')}" onclick="odl_selectAllDevices()"/> <input type="button" id="select-none" value="{f:translate(key: 'mod.labels.devices.select.none')}" onclick="odl_selectNoneDevices()"/></p>
+							<dl class="devices">
+								<dt><label for="device-template"><f:translate key="mod.labels.template"/></label></dt>
+								<dd><select name="tx_twodl_web_twodlodl[template]" id="device-template">
+										<f:for each="{labelTemplates}" as="template">
+											<option value="{template.path}">{template.label}</option>
+										</f:for>
+									</select></dd>
+								<dt><label for="device-offset"><f:translate key="mod.labels.offset"/></label></dt>
+								<dd><input type="text" name="tx_twodl_web_twodlodl[offset]" value="0" id="device-offset"/></dd>
+							</dl>
+							<p class="submit"><input type="submit" name="print-labels" value="{f:translate(key: 'mod.labels.print')}"/>  </p>
+						</form>
+					</f:then>
+					<f:else>
+						<p><f:translate key="mod.labels.template.none"/></p>
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<p><f:translate key="mod.labels.devices.none"/></p>
+			</f:else>
+		</f:if>
+	</f:be.container>
+
+</f:section>

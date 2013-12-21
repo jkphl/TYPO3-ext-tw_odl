@@ -1,0 +1,17 @@
+{namespace odl=Tollwerk\TwOdl\ViewHelpers}
+<odl:tcpdf width="62" labelheight="35" unit="mm" left="1" right="1" top="1" bottom="1" spacing="2" borderwidth="0.05" bordercolor="{0:0, 1:0, 2:0}">
+	<odl:tcpdf.font family="DroidSans" fontfile="fileadmin/templates/fonts/DroidSans/DroidSans.ttf"/>
+	<odl:tcpdf.font family="DroidSans" fontfile="fileadmin/templates/fonts/DroidSans/DroidSans-Bold.ttf" style="b"/>
+	<f:for each="{devices}" as="device">
+		<odl:tcpdf.label>
+			<odl:tcpdf.image file="EXT:tw_odl/Resources/Public/Images/odl-nbg-hor-de-white.eps" width="36" top="2" left="2" right="2" halign="left"/>
+			<odl:tcpdf.text x="40" y="1.6" width="19" halign="right" fontfamily="DroidSans" fontstyle="b" fontcolor="{0:0, 1:116, 2:148}" fontsize="22"><odl:deviceIdentifier device="{device}" identifier="%s" digits="{settings.deviceNumberDigits}"/></odl:tcpdf.text>
+			<odl:tcpdf.text x="1" y="15" width="12" height="4" fontfamily="DroidSans" fontsize="7" valign="bottom"><f:translate key="device.name"/></odl:tcpdf.text>
+			<odl:tcpdf.text x="12" width="47" height="4.5" fontfamily="DroidSans" fontsize="10" fontstyle="b" cursor="1" halign="right">{device.manufacturer.name} {device.name}</odl:tcpdf.text>
+			<odl:tcpdf.text x="1" width="12" height="4" fontfamily="DroidSans" fontsize="7" valign="bottom"><f:translate key="device.os"/></odl:tcpdf.text>
+			<odl:tcpdf.text x="12" width="47" height="4.5" fontfamily="DroidSans" fontsize="10" fontstyle="b" cursor="1" halign="right">{device.os.name} {device.osversion.version}</odl:tcpdf.text>
+			<odl:tcpdf.text x="1" width="12" height="4" fontfamily="DroidSans" fontsize="7" valign="bottom"><f:translate key="device.contributor"/></odl:tcpdf.text>
+			<odl:tcpdf.text x="12" width="47" height="10" fontfamily="DroidSans" fontsize="10" fontstyle="b" halign="right">{device.contributor.name}</odl:tcpdf.text>
+		</odl:tcpdf.label>
+	</f:for>
+</odl:tcpdf>

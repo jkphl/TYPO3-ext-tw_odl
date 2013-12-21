@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-04-07T12:52:14Z" product-name="tw_odl">
+        <header/>
+        <body>
+            <trans-unit id="wizicon.device.title" approved="yes">
+                <source>ODL Device List</source> <target state="translated">ODL Geräteliste</target></trans-unit>
+            <trans-unit id="wizicon.device.description" approved="yes">
+                <source>Insert this plugin for rendering a list of all registered ODL devices.</source>
+            <target state="translated">Fügen Sie dieses Element ein, um eine Liste aller registrierten ODL-Geräte im Frontend anzuzeigen.</target></trans-unit>
+            <trans-unit id="wizicon.useragent.title" approved="yes">
+                <source>ODL Device User Agent Registration</source> <target state="translated">ODL Geräte-User-Agent-Registrierung</target></trans-unit>
+            <trans-unit id="wizicon.useragent.description" approved="yes">
+                <source>Insert this plugin for rendering a device user agent registration form.</source> <target state="translated">Fügen Sie dieses Element ein, um ein Formular zur Registrierung eines Geräte-User-Agents im Frontend anzuzeigen.</target></trans-unit>
+            
+            <trans-unit id="device.name" approved="yes">
+                <source>Device</source> <target state="translated">Gerät</target></trans-unit>
+            <trans-unit id="device.os" approved="yes">
+                <source>OS</source>
+            <target state="translated">System</target></trans-unit>
+            <trans-unit id="device.resolution" approved="yes">
+                <source>Resolution</source>
+            <target state="translated">Auflösung</target></trans-unit>
+            <trans-unit id="device.resolution.css" approved="yes">
+                <source>CSS resolutions</source>
+            <target state="translated">CSS-Auflösungen</target></trans-unit>
+            <trans-unit id="device.diagonal" approved="yes">
+                <source>Diagonal</source>
+            <target state="translated">Diagonale</target></trans-unit>
+            <trans-unit id="device.browsers" approved="yes">
+                <source>Web browsers</source>
+            <target state="translated">Web-Browser</target></trans-unit>
+            <trans-unit id="device.contributor" approved="yes">
+                <source>Contributor</source>
+            <target state="translated">Spender</target></trans-unit>
+            <trans-unit id="device.available" approved="yes">
+                <source>Availability</source>
+            <target state="translated">Verfügbarkeit</target></trans-unit>
+            <trans-unit id="device.available.permanent" approved="yes">
+                <source>Permanent</source>
+            <target state="translated">Vor Ort</target></trans-unit>
+            <trans-unit id="device.available.ondemand" approved="yes">
+                <source>On demand</source>
+            <target state="translated">Auf Anfrage</target></trans-unit>
+            <trans-unit id="device.comment" approved="yes">
+                <source>Comment</source>
+            <target state="translated">Kommentar</target></trans-unit>
+            <trans-unit id="device.inputmethods" approved="yes">
+                <source>Input methods</source>
+            <target state="translated">Eingabe</target></trans-unit>
+            <trans-unit id="device.connectivity" approved="yes">
+                <source>Connectivity</source>
+            <target state="translated">Konnektivität</target></trans-unit>
+            <trans-unit id="device.density" approved="yes">
+                <source>Pixel density</source>
+            <target state="translated">Pixeldichte</target></trans-unit>
+            
+            <trans-unit id="mod.tools.labels" approved="yes">
+                <source>Label printing</source>
+            <target state="translated">Etikettendruck</target></trans-unit>
+            <trans-unit id="mod.labels.header" approved="yes">
+                <source>Print device labels</source>
+            <target state="translated">Geräte-Etiketten drucken</target></trans-unit>
+            <trans-unit id="mod.labels.print" approved="yes">
+                <source>Print labels for the selected devices</source>
+            <target state="translated">Etiketten für ausgewählte Geräte drucken</target></trans-unit>
+            <trans-unit id="mod.labels.offset" approved="yes">
+                <source>Blank labels offset</source>
+            <target state="translated">Versatz Leeretiketten</target></trans-unit>
+            <trans-unit id="mod.labels.template" approved="yes">
+                <source>Label template</source>
+            <target state="translated">Etikettenvorlage</target></trans-unit>
+            <trans-unit id="mod.labels.template.none" approved="yes">
+                <source>There are no templates that could be used for label printing.</source>
+            <target state="translated">Es stehen keine Vorlagen für den Etikettendruck zur Verfügung.</target></trans-unit>
+            <trans-unit id="mod.labels.devices.none" approved="yes">
+                <source>There are no devices on this page for which you could print labels.</source>
+            <target state="translated">Es liegen keine Geräte auf dieser Seite, für die Etiketten gedruckt werden könnten.</target></trans-unit>
+            <trans-unit id="mod.labels.devices.select.all" approved="yes">
+                <source>Select all devices</source>
+            <target state="translated">Alle Geräte auswählen</target></trans-unit>
+            <trans-unit id="mod.labels.devices.select.none" approved="yes">
+                <source>Clear selection</source>
+            <target state="translated">Auswahl aufheben</target></trans-unit>
+            <trans-unit id="mod.tools.wallpapers" approved="yes">
+                <source>Device wallpapers</source>
+            <target state="translated">Bildschirmhintergründe</target></trans-unit>
+            <trans-unit id="mod.wallpapers.header" approved="yes">
+                <source>Create device wallpapers</source>
+            <target state="translated">Bildschirmhintergründe erzeugen</target></trans-unit>
+            <trans-unit id="mod.wallpapers.create" approved="yes">
+                <source>Create selected wallpapers</source>
+            <target state="translated">Bildschirmhintergründe für ausgewählte Geräte erzeugen</target></trans-unit>
+            <trans-unit id="mod.wallpapers.devices.none" approved="yes">
+                <source>There are no devices on this page for which you could create wallpapers.</source>
+            <target state="translated">Es liegen keine Geräte auf dieser Seite, für die Bildschirmhintergründe erzeugt werden könnten.</target></trans-unit>
+        </body>
+    </file>
+</xliff>

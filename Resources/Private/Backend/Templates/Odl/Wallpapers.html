@@ -1,0 +1,42 @@
+{namespace odl=Tollwerk\TwOdl\ViewHelpers}
+<f:layout name="module" />
+
+<f:section name="main">
+
+	<f:be.container pageTitle="foo" enableJumpToUrl="true"
+		enableClickMenu="false" loadPrototype="false"
+		loadScriptaculous="false" loadExtJs="false" loadExtJsTheme="false"
+		extJsAdapter="jQuery" enableExtJsDebug="false"
+		addCssFile="{f:uri.resource(path:'Css/module.css')}"
+		addJsFile="{f:uri.resource(path:'Js/module.js')}">
+
+		<h2><f:translate key="mod.wallpapers.header"/></h2>
+		<f:if condition="{devices}">
+			<f:then>
+				<form method="post">
+					<table class="typo3-dblist devices">
+							<tr class="t3-row-header">
+								<td class="col-icon">&nbsp;</td>
+								<td colspan="3"><f:translate key="LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:tx_twodl_domain_model_device"/> (<f:count subject="{devices}"/>)</td>
+							</tr>
+							<f:for each="{devices}" as="device">
+								<f:alias map="{identifier: '{odl:deviceIdentifier(device: device, identifier: settings.deviceIdentifier, digits: settings.deviceNumberDigits)}'}">
+									<tr class="db_list_normal">
+										<td class="col-icon"><input type="checkbox" name="tx_twodl_web_twodlodl[devices][]" value="{device.uid}" class="device" id="device-{device.uid}"/></td>
+										<td class="col-identifier"><label for="device-{device.uid}">{identifier}</label></td>
+										<td class="col-device-name"><label for="device-{device.uid}">{device.manufacturer.name} {device.name}</label></td>
+										<td class="col-device-wallpaper"><f:if condition="{odl:wallpaper.exists(directory: settings.wallpaperRootPath, identifier: identifier)}"><f:then><a href="/{settings.wallpaperRootPath}{identifier}.jpg" target="_blank">/{settings.wallpaperRootPath}{identifier}.jpg</a></f:then><f:else>---</f:else></f:if></td>
+									</tr>
+								</f:alias>
+							</f:for>
+					</table>
+					<p><input type="button" id="select-all" value="{f:translate(key: 'mod.labels.devices.select.all')}" onclick="odl_selectAllDevices()"/> <input type="button" id="select-none" value="{f:translate(key: 'mod.labels.devices.select.none')}" onclick="odl_selectNoneDevices()"/></p>
+					<p class="submit"><input type="submit" name="create-wallpapers" value="{f:translate(key: 'mod.wallpapers.create')}"/></p>
+				</form>
+			</f:then>
+			<f:else>
+				<p><f:translate key="mod.wallpapers.devices.none"/></p>
+			</f:else>
+		</f:if>
+	</f:be.container>
+</f:section>

@@ -1,0 +1,47 @@
+<form action="{f:uri.action(action: 'useragent')}" method="post" class="useragents">
+    <h2><f:translate key="useragent.header"/></h2>
+    <p><f:translate key="useragent.description"/></p>
+    <f:if condition="{registered}">
+        <p class="success"><f:translate key="useragent.device.register.success"/></p>
+    </f:if>
+    <f:if condition="{unregistered}">
+        <p class="success"><f:translate key="useragent.device.unregister.success"/></p>
+    </f:if>
+    <dl>
+        <dt><f:translate key="useragent.device.number"/></dt>
+        <dd><input name="tx_twodl_useragent[device]" type="number" value="{device.uid}" min="1" size="3"/></dd>
+        
+        <f:if condition="{device}">
+            <f:then>
+                <dt><f:translate key="useragent.device.name"/></dt>
+                <dd>{device.name}</dd>
+                <dt><f:translate key="useragent.device.browsers"/></dt>
+                <dd>
+                    <f:if condition="{device.browsers}">
+                        <f:then>
+                            <select name="tx_twodl_useragent[installedbrowser]">
+                                <f:for each="{device.browsers}" as="browser">
+                                    <option value="{browser.uid}"<f:if condition="{installedbrowser.uid} == {browser.uid}"> selected="selected"</f:if>>{browser.browser.name} {browser.version.version} (<f:if condition="{browser.useragent}"><f:then>{browser.useragent}</f:then><f:else><f:translate key="useragent.device.browsers.useragent"/></f:else></f:if>)</option>
+                                </f:for>
+                            </select>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="useragent.device.browsers.none"/>
+                        </f:else>
+                    </f:if>
+                </dd>
+                <dt><f:translate key="useragent.device.useragent"/></dt>
+                <dd>{useragent}</dd>
+            </f:then>
+            <f:else>
+            </f:else>
+        </f:if>
+    </dl>
+    <div>
+        <f:if condition="{device.browsers}">
+            <input type="submit" value="{f:translate(key: 'useragent.device.register')}" name="tx_twodl_useragent[register]"/>
+            <input type="submit" value="{f:translate(key: 'useragent.device.unregister')}" name="tx_twodl_useragent[unregister]"/>
+        </f:if>
+        <input type="submit" value="{f:translate(key: 'useragent.device.load')}" name="tx_twodl_useragent[load]"/>
+    </div>
+</form>

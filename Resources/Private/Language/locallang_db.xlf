@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-04-07T12:52:14Z" product-name="tw_odl">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.list_type.device">
+				<source>ODL Device List</source>
+			</trans-unit>
+		    <trans-unit id="tt_content.list_type.useragent">
+		        <source>ODL Device User Agent Registration</source>
+		    </trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_manufacturer">
+				<source>ODL Device Manufacturer</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_manufacturer.name">
+				<source>Name</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_os">
+				<source>ODL Operating System</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_os.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_os.versions">
+				<source>Versions</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_os.wizards.add">
+				<source>Add new operating system</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_osversion">
+				<source>ODL Operating System Version</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_osversion.version">
+				<source>Version</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_device">
+				<source>ODL Device</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.model">
+				<source>Model</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.serialnumber">
+				<source>Serial no.</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.imei">
+				<source>IMEI</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.available">
+				<source>Availability</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.available.permanent">
+				<source>Permanent</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.available.demand">
+				<source>On demand</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.width">
+				<source>Width (px)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.height">
+				<source>Height (px)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.diagonal">
+				<source>Diagonal (inch)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.ppcm">
+				<source>Pixels per cm</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.ppi">
+				<source>Pixelx per inch</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.internalcomment">
+				<source>Internal comment</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.manufacturer">
+				<source>Manufacturer</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.os">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.osversion">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.contributor">
+				<source>Contributor</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.resolutions">
+				<source>Screen resolutions</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.browsers">
+				<source>Installed web browsers</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.palette.os">
+				<source>Operating system</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.palette.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.palette.homescreen">
+				<source>Homescreen wallpaper</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.tab.characteristics">
+				<source>Characteristics</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.tab.comments">
+				<source>Comments</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.select">
+				<source>--- Not selected ---</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.registration">
+				<source>Registration</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods">
+				<source>Input methods</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.mouse">
+				<source>Mouse</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.touchscreen">
+				<source>Touchscreen</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.penstylus">
+				<source>Pen / stylus</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.keyboard">
+				<source>Keyboard</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.trackball">
+				<source>Trackball</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.joystick">
+				<source>Joystick</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.touchpad">
+				<source>Touchpad</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.opticaljoystick">
+				<source>Optical joystick</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.trackwheel">
+				<source>Trackwheel</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.inputmethods.pointingstick">
+				<source>Pointing stick</source>
+			</trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity">
+		        <source>Connectivity</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.wifi">
+		        <source>WiFi</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.mobiletelephony">
+		        <source>Mobile telephony</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.mobiledata">
+		        <source>Mobile data</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.gps">
+		        <source>GPS</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.bluetooth">
+		        <source>Bluetooth</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.infrared">
+		        <source>Infrared</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_device.connectivity.nfc">
+		        <source>NFC</source>
+		    </trans-unit>
+			<trans-unit id="tx_twodl_domain_model_device.notavailable">
+				<source>--- Not available ---</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_twodl_domain_model_contributor">
+				<source>ODL Contributor</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_contributor.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_contributor.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_contributor.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_contributor.wizards.add">
+				<source>Add new contributor</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_resolution">
+				<source>ODL CSS Screen Resolution</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.width">
+				<source>Width (px)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.height">
+				<source>Height (px)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.ratio">
+				<source>Display ratio</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.orientation">
+				<source>Orientations</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.orientation.landscape">
+				<source>Landscape</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.orientation.portrait">
+				<source>Portrait</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.palette.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.orientation.title.1">
+				<source> (portrait only)</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_resolution.orientation.title.2">
+				<source> (landscape only)</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_browserversion">
+				<source>ODL Web Browser Version</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_browserversion.version">
+				<source>Version</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twodl_domain_model_browser">
+				<source>ODL Web Browser</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_browser.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_browser.versions">
+				<source>Versions</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_browser.wizards.add">
+				<source>Add new web browser</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_twodl_domain_model_installedbrowser">
+				<source>ODL Installed Web Browser</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_installedbrowser.browser">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_installedbrowser.version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="tx_twodl_domain_model_installedbrowser.palette.browser">
+				<source>Web browser</source>
+			</trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.features">
+		        <source>Features</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.features.mediaqueries">
+		        <source>CSS3 media queries</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.debuggers">
+		        <source>Debugging options</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.debuggers.edgeinspect">
+		        <source>Adobe Edge Inspect</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.debuggers.ghostlab">
+		        <source>Ghostlab</source>
+		    </trans-unit>
+		    <trans-unit id="tx_twodl_domain_model_installedbrowser.useragent">
+		        <source>User agent string</source>
+		    </trans-unit>
+			
+			<trans-unit id="constants.file.templateRootPath.fe" xml:space="preserve">
+				<source>Path to template root (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.partialRootPath.fe" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.layoutRootPath.fe" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.persistence.storagePid" xml:space="preserve">
+				<source>Default storage PID</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.disableJsonpAPI" xml:space="preserve">
+				<source>Disable JSONP API</source>
+			</trans-unit>
+			
+			<trans-unit id="constants.file.templateRootPath.be" xml:space="preserve">
+				<source>Path to template root (BE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.partialRootPath.be" xml:space="preserve">
+				<source>Path to template partials (BE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.layoutRootPath.be" xml:space="preserve">
+				<source>Path to template layouts (BE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.labelTemplateRootPath.be" xml:space="preserve">
+				<source>Path to device label templates (BE)</source>
+			</trans-unit>
+			<trans-unit id="constants.other.deviceIdentifier" xml:space="preserve">
+				<source>Device identifier pattern:Include %s as placeholder for the device number (otherwise all devices will have the same identifier)</source>
+			</trans-unit>
+			<trans-unit id="constants.other.deviceNumberDigits" xml:space="preserve">
+				<source>Device number digits</source>
+			</trans-unit>
+			<trans-unit id="constants.file.wallpaperRootPath" xml:space="preserve">
+				<source>Device wallpaper root:If you enter a custom directory here please ensure that it exists and that the web server has write access to it!</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

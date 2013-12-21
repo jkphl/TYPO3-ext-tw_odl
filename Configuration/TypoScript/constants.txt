@@ -1,0 +1,39 @@
+plugin.tx_twodl {
+	view {
+		# cat=plugin.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.templateRootPath.fe
+		templateRootPath = EXT:tw_odl/Resources/Private/Templates/
+		# cat=plugin.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.partialRootPath.fe
+		partialRootPath = EXT:tw_odl/Resources/Private/Partials/
+		# cat=plugin.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.layoutRootPath.fe
+		layoutRootPath = EXT:tw_odl/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_twodl/other/a; type=int+; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.persistence.storagePid
+		storagePid = 
+	}
+	features {
+		# cat=plugin.tx_twodl/enable/a; type=boolean; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.enable.disableJsonpAPI
+		disableJsonpAPI = 0
+	}
+}
+
+module.tx_twodl {
+	view {
+		# cat=module.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.templateRootPath.be
+		templateRootPath = EXT:tw_odl/Resources/Private/Backend/Templates/
+		# cat=module.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.partialRootPath.be
+		partialRootPath = EXT:tw_odl/Resources/Private/Backend/Partials/
+		# cat=module.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.layoutRootPath.be
+		layoutRootPath = EXT:tw_odl/Resources/Private/Backend/Layouts/
+		# cat=module.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.labelTemplateRootPath.be
+		labelTemplateRootPath = EXT:tw_odl/Resources/Private/Backend/Templates/Labels/
+	}
+	settings {
+		# cat=module.tx_twodl/other; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.other.deviceIdentifier
+		deviceIdentifier = ODL-%s
+		# cat=module.tx_twodl/other; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.other.deviceNumberDigits
+		deviceNumberDigits = 3
+		# cat=module.tx_twodl/file; type=string; label=LLL:EXT:tw_odl/Resources/Private/Language/locallang_db.xlf:constants.file.wallpaperRootPath
+		wallpaperRootPath = typo3temp/odl-wallpapers
+	}
+}

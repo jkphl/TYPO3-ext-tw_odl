@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-04-07T12:52:14Z" product-name="tw_odl">
+        <header/>
+        <body>
+            <trans-unit id="wizicon.device.title">
+                <source>ODL Device List</source>
+            </trans-unit>
+            <trans-unit id="wizicon.device.description">
+                <source>Insert this plugin for rendering a list of all registered ODL devices.</source>
+            </trans-unit>
+            <trans-unit id="wizicon.useragent.title">
+                <source>ODL Device User Agent Registration</source>
+            </trans-unit>
+            <trans-unit id="wizicon.useragent.description">
+                <source>Insert this plugin for rendering a device user agent registration form.</source>
+            </trans-unit>
+            
+            <trans-unit id="device.name">
+                <source>Device</source>
+            </trans-unit>
+            <trans-unit id="device.os">
+                <source>OS</source>
+            </trans-unit>
+            <trans-unit id="device.resolution">
+                <source>Resolution</source>
+            </trans-unit>
+            <trans-unit id="device.resolution.css">
+                <source>CSS resolutions</source>
+            </trans-unit>
+            <trans-unit id="device.diagonal">
+                <source>Diagonal</source>
+            </trans-unit>
+            <trans-unit id="device.browsers">
+                <source>Web browsers</source>
+            </trans-unit>
+            <trans-unit id="device.contributor">
+                <source>Contributor</source>
+            </trans-unit>
+            <trans-unit id="device.available">
+                <source>Availability</source>
+            </trans-unit>
+            <trans-unit id="device.available.permanent">
+                <source>Permanent</source>
+            </trans-unit>
+            <trans-unit id="device.available.ondemand">
+                <source>On demand</source>
+            </trans-unit>
+            <trans-unit id="device.comment">
+                <source>Comment</source>
+            </trans-unit>
+            <trans-unit id="device.inputmethods">
+                <source>Input methods</source>
+            </trans-unit>
+            <trans-unit id="device.connectivity">
+                <source>Connectivity</source>
+            </trans-unit>
+            <trans-unit id="device.density">
+                <source>Pixel density</source>
+            </trans-unit>
+            
+            <trans-unit id="useragent.header">
+                <source>Device User Agent registration</source>
+            </trans-unit>
+            <trans-unit id="useragent.description">
+                <source>Use this form to register the User Agent string of a specific browser installed on a registered ODL device. First of all, please provide the device number (i.e. the consecutive number being part of the device identifier, without leading zeros).</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.number">
+                <source>Device number</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.name">
+                <source>Device name</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.useragent">
+                <source>User agent</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.browsers">
+                <source>Installed browsers</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.browsers.none">
+                <source>Currently there are no installed browsers registered for this device.</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.browsers.useragent">
+                <source>No user agent registered yet</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.load">
+                <source>Load device details</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.register">
+                <source>Register user agent string</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.register.success">
+                <source>The user agent string has been registered successfully.</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.unregister">
+                <source>Clear selected browser registration</source>
+            </trans-unit>
+            <trans-unit id="useragent.device.unregister.success">
+                <source>The user agent string has been unregistered successfully.</source>
+            </trans-unit>
+            
+            <trans-unit id="mod.tools.labels">
+                <source>Label printing</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.header">
+                <source>Print device labels</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.print">
+                <source>Print labels for the selected devices</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.offset">
+                <source>Blank labels offset</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.template">
+                <source>Label template</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.template.none">
+                <source>There are no templates that could be used for label printing.</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.devices.none">
+                <source>There are no devices on this page for which you could print labels.</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.devices.select.all">
+                <source>Select all devices</source>
+            </trans-unit>
+            <trans-unit id="mod.labels.devices.select.none">
+                <source>Clear selection</source>
+            </trans-unit>
+            <trans-unit id="mod.tools.wallpapers">
+                <source>Device wallpapers</source>
+            </trans-unit>
+            <trans-unit id="mod.wallpapers.header">
+                <source>Create device wallpapers</source>
+            </trans-unit>
+            <trans-unit id="mod.wallpapers.create">
+                <source>Create selected wallpapers</source>
+            </trans-unit>
+            <trans-unit id="mod.wallpapers.devices.none">
+                <source>There are no devices on this page for which you could create wallpapers.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

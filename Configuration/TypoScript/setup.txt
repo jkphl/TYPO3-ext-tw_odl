@@ -1,0 +1,203 @@
+# PLUGIN CONFIGURATION
+plugin.tx_twodl = USER
+plugin.tx_twodl {
+	settings {
+		deviceIdentifier				= {$module.tx_twodl.settings.deviceIdentifier}
+		deviceNumberDigits				= {$module.tx_twodl.settings.deviceNumberDigits}
+	}
+	view {
+		templateRootPath				= {$plugin.tx_twodl.view.templateRootPath}
+		partialRootPath					= {$plugin.tx_twodl.view.partialRootPath}
+		layoutRootPath					= {$plugin.tx_twodl.view.layoutRootPath}
+	}
+	persistence {
+		storagePid						= {$plugin.tx_twodl.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper		= 1
+	}
+}
+
+# MODULE CONFIGURATION
+module.tx_twodl {
+	settings {
+		deviceIdentifier				= {$module.tx_twodl.settings.deviceIdentifier}
+		deviceNumberDigits				= {$module.tx_twodl.settings.deviceNumberDigits}
+		labelTemplateRootPath			= {$module.tx_twodl.view.labelTemplateRootPath}
+		wallpaperRootPath				= {$module.tx_twodl.settings.wallpaperRootPath}
+		
+		wallpaper {
+			XY							= ###DEVICEHOMEWIDTH###,###DEVICEHOMEHEIGHT###
+			backColor					= #ffffff
+			backColor					= #191919
+			quality						= 100
+			10							= IMAGE
+			10 {
+				file					= GIFBUILDER
+				file {
+					XY					= ###DEVICEWIDTH###,###DEVICEHEIGHT###
+					backColor			= #191919
+					10					= IMAGE
+					10 {
+#						file			= EXT:tw_odl/Resources/Public/Images/odl-nbg-ver-de-white.png
+#						file			= EXT:tw_odl/Resources/Public/Images/odl-nbg-ver-de-white.eps
+						file			= EXT:tw_odl/Resources/Public/Images/odl-nbg-ver-de-dark.eps
+#						file			= EXT:tw_odl/Resources/Public/Images/odl-nbg-dark.eps
+						file {
+							width		= ###DEVICEWIDTH###m
+							maxW		= ###DEVICEWIDTH###
+							height		= ###DEVICEHEIGHT###m
+							maxH		= ###DEVICEHEIGHT###
+							params		= -density 300
+						}
+						align			= c,c
+					}
+					20 = SCALE
+					20 {
+						width			= ###DEVICEWIDTH###/2
+						height			= ###DEVICEHEIGHT###/2
+					}
+				}
+				align					= c,c			
+			}
+			20							= TEXT
+			20 {
+				text					= ###DEVICENUMBER###
+				fontSize				= ###DEVICEPPI###/5
+				fontSize.prioriCalc		= intval
+				fontFile				= EXT:tw_odl/Resources/Private/Fonts/DroidSans/DroidSans-Bold.ttf
+				fontColor				= #007494
+				fontColor				= #474747
+				align					= center
+				offset					= 0,###DEVICEHEIGHT###*.1+[20.h]
+				if {
+					value				= ###DEVICEHEIGHT###
+					isLessThan			= ###DEVICEWIDTH###
+				}
+			}
+			30							= TEXT
+			30 {
+				text					= ###DEVICENUMBER###
+				fontSize				= ###DEVICEPPI###/5
+				fontSize.prioriCalc		= intval
+				fontFile				= EXT:tw_odl/Resources/Private/Fonts/DroidSans/DroidSans-Bold.ttf
+				fontColor				= #007494
+				fontColor				= #474747
+				align					= center
+				offset					= 0,###DEVICEHEIGHT###*.9
+				if {
+					value				= ###DEVICEHEIGHT###
+					isLessThan			= ###DEVICEWIDTH###
+				}
+			}
+			40							= TEXT
+			40 {
+				text					= ###DEVICENUMBER###
+				fontSize				= ###DEVICEPPI###/5
+				fontSize.prioriCalc		= intval
+				fontFile				= EXT:tw_odl/Resources/Private/Fonts/DroidSans/DroidSans-Bold.ttf
+				fontColor				= #007494
+				fontColor				= #474747
+				offset					= ###DEVICEHOMEWIDTH###/20,###DEVICEHEIGHT###+[40.h]/2
+				if {
+					value				= ###DEVICEHEIGHT###
+					isGreaterThan		= ###DEVICEWIDTH###
+				}
+			}
+			50							= TEXT
+			50 {
+				text					= ###DEVICENUMBER###
+				fontSize				= ###DEVICEPPI###/5
+				fontSize.prioriCalc		= intval
+				fontFile				= EXT:tw_odl/Resources/Private/Fonts/DroidSans/DroidSans-Bold.ttf
+				fontColor				= #007494
+				fontColor				= #474747
+				offset					= ###DEVICEHOMEWIDTH###*.95-[50.w],###DEVICEHEIGHT###+[50.h]/2
+				if {
+					value				= ###DEVICEHEIGHT###
+					isGreaterThan		= ###DEVICEWIDTH###
+				}
+			}
+		}
+	}
+	persistence {
+		storagePid						= 
+	}
+	view {
+		templateRootPath				= {$module.tx_twodl.view.templateRootPath}
+		partialRootPath					= {$module.tx_twodl.view.partialRootPath}
+		layoutRootPath					= {$module.tx_twodl.view.layoutRootPath}
+	}
+}
+
+# DEVICES JSONP API
+odlDevicesJSONP							= PAGE
+odlDevicesJSONP {
+	typeNum								= 1333
+	10									= USER
+	10 {
+		userFunc						= tx_extbase_core_bootstrap->run
+		settings		 				< plugin.tx_twodl.settings
+		persistence 					< plugin.tx_twodl.persistence
+		view							< plugin.tx_twodl.view
+		vendorName						= Tollwerk
+		extensionName					= TwOdl
+		pluginName						= Device
+		controller						= Device
+		action							= jsonp
+		switchableControllerActions{
+			Device {
+				1						= jsonp
+			}
+		}
+	}
+	config {
+		disableAllHeaderCode			= 1
+		xhtml_cleaning					= 0
+		admPanel						= 0
+		sourceopt {
+			enabled						= 0
+			formatHtml					= 0
+		}
+		index_enable					= 0
+	}
+}
+
+# DEVICE USER AGENT & BARCODE
+odlDeviceBarcode			= PAGE
+odlDeviceBarcode {
+	typeNum								= 1335
+	10									= USER
+	10 {
+		userFunc						= tx_extbase_core_bootstrap->run
+		settings		 				< plugin.tx_twodl.settings
+		persistence 					< plugin.tx_twodl.persistence
+		view							< plugin.tx_twodl.view
+		vendorName						= Tollwerk
+		extensionName					= TwOdl
+		pluginName						= Device
+		controller						= Device
+		action							= barcode
+		switchableControllerActions{
+			Device {
+				1						= barcode
+			}
+		}
+	}
+	config {
+		disableAllHeaderCode			= 1
+		xhtml_cleaning					= 0
+		admPanel						= 0
+		sourceopt {
+			enabled						= 0
+			formatHtml					= 0
+		}
+		index_enable					= 0
+	}
+}
+
+# DISABLE JSONP API VIA TYPOSCRIPT
+[globalVar = LIT:1 = {$plugin.tx_twodl.features.disableJsonpAPI}]
+	odlDevicesJSONP						>
+[global]
